@@ -11,7 +11,8 @@ it("searches for web driver", () => {
   return driver.then(driver => {
     driver.get('http://www.google.com/ncr')
     driver.findElement(By.name('q')).sendKeys('webdriver')
-    driver.findElement(By.name('btnG')).click()
+    driver.findElement(By.name('q')).sendKeys('\n')
+    //driver.findElement(By.name('btnK')).click()
 
     driver.wait(until.titleIs('webdriver - Google Search'), 2000)
 
